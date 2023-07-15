@@ -1,0 +1,69 @@
+const NFTs = [
+    {
+        name: "Bench",
+        size: "23x32",
+        properties: "Cotton",
+        color: "Purple",
+        brand: "Bench"
+    },
+    {
+        name: "Oxygn",
+        size: "24x31",
+        properties: "Nylon",
+        color: "Black",
+        brand: "Oxygn"
+    },
+    {
+        name: "H&M",
+        size: "21x29",
+        properties: "Cotton",
+        color: "Gray",
+        brand: "H&M"
+    }
+  ];
+ 
+  function mintNFT(nft) {
+    NFTs.push(nft);
+    return nft;
+  }
+ 
+  function listNFTs() {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log(NFTs[i]);
+    }
+    console.log("------------------");
+  }
+ 
+  function getTotalSupply() {
+    console.log(`Total Supply: ${NFTs.length}`);
+    console.log("------------------");
+  }
+ 
+  // Call your functions below this line
+ 
+  listNFTs();
+ 
+  mintNFT({
+    name: "Penshoppe",
+    size: "25x35",
+    properties: "Silk",
+    color: "Red",
+    brand: "Penshoppe"
+  });
+  mintNFT({
+    name: "Converse",
+    size: "36x42",
+    properties: "Cotton",
+    color: "White",
+    brand: "Converse"
+  });
+  mintNFT({
+    name: "Regatta",
+    size: "23x32",
+    properties: "Mesh",
+    color: "Green",
+    brand: "Regatta"
+  });
+  listNFTs();
+ 
+  getTotalSupply()
